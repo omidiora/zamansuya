@@ -25,22 +25,23 @@
       </nav>
 
       <body>
-          
+  <div class="col-md-6 offset-md-2"    style="margin-top:200px">
 <div class="card">
-    <h5 class="card-header">About us</h5>
+    <h5 class="card-header text-center" style="background-color:red;color:white" >About us</h5>
     <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <p class="card-text">We are delighted to introduce to you ZAMAN GLOBAL VENTURES trading as <strong>zaman</strong>a suya spot with outlet 
-    in Omole and Allen avenue, Lagos . WE serve the traditional tastry and hot Chicken ,Beef, Liver, Goddard suya.
-    ZAMAN GLOBAL VENTURES was incorporeated in Decemenber 2017 and opended for bussinees operations on the `6th Januart2018
-    Our missions is to be the suya spot of choice , for lovers of tradittional tastry suta , by proiding quality suya options under clean and hygenic \
+      <h5 class="card-title text-center"> ZAMAN GLOBAL VENTURES</h5>
+      <p class="card-text">We are delighted to introduce to you ZAMAN GLOBAL VENTURES trading as <strong>zaman</strong> suya spot with outlet 
+    in Omole and Allen avenue, Lagos . We serve the traditional tasty and hot Chicken ,Beef, Liver, Goddard suya.
+    ZAMAN GLOBAL VENTURES was incorporated in Decemenber 2017 and opened for bussiness operations on the 6th January 2018.
+    Our missions is to be the suya spot of choice , for lovers of traditional tasty suya , by providing quality suya options under clean and hygenic 
     environment.
-    while focusing on satifying an efficcient customer service.
+    while focusing on satifying an efficient customer service.
  
 </p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+     
     </div>
   </div>
+</div>     
       </body>
 
 

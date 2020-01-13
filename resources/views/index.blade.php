@@ -8,7 +8,9 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
         <a class="navbar-brand ml-4" href="#">Zamansuya</a>
+      </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="null" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

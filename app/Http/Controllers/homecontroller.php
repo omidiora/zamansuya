@@ -19,4 +19,8 @@ class homecontroller extends Controller
         return view('product')->with('zaman',$zaman);
     }
 
+    public function about(){
+    return view('about');
+    }
+
 }

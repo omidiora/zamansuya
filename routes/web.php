@@ -18,7 +18,9 @@ Route::get('/home', function () {
     return view('index');
 });
 Route::get('/home','homecontroller@home');
+Route::get('/about','homecontroller@about');
 
 Route::get('suya','homecontroller@index')->name('suya');
 //admin route
 Route::resource('adminzaman','AdminController');
+Route::post('/cart','ShoppingController@addcart')->name('cart.add');
