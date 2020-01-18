@@ -1,0 +1,1 @@
+<h1>Hi, Please ckick the link to activate your account</h1>

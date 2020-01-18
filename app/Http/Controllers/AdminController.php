@@ -7,6 +7,7 @@ use App\Admin;
 use Illuminate\Support\Facades\Url;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Str;
 
 
 class AdminController extends Controller
@@ -45,11 +46,13 @@ class AdminController extends Controller
         $this->validate($request,[
         'name'=>'required',
         'price'=>'required',
-        'image'=>'required'
+        'image'=>'required',
+      
         ]);
         $zaman=new Admin;
         $zaman->name=$request->name;
         $zaman->price=$request->price;
+        $zaman->slug=Str::slug($request->name);
         if($file=$request->image){
             $file=$request->image;
             $file->move(public_path().'/uploads/',$file->getClientOriginalName());

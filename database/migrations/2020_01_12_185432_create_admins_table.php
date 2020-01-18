@@ -17,6 +17,7 @@ class CreateAdminsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->integer('price');
+            $table->string('slug');
             $table->string('image');
             $table->timestamps();
         });

@@ -1,0 +1,121 @@
+
+.cont{
+  
+    background-size: cover;
+    position: relative;
+   
+
+  }
+  
+  /* Bottom left text */
+  .bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
+  
+  /* Top left text */
+  .top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+  
+  /* Top right text */
+  .top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+  
+  /* Bottom right text */
+  .bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }
+  
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+  .btn {
+    display: inline-block;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: white !important;
+    border-radius: 0;
+    padding: 18px 80px 20px;
+    transition: all 0.7s ease-out;
+    background-image: linear-gradient(to right, #2b5876 0%, #4e4376 51%, #2b5876 100%);
+  
+    background-position: 1% 50%;
+    background-size: 300% 300%;
+    text-decoration: none;
+    margin: 0.625rem;
+    border: none;
+    border: 1px solid rgba(223,190,106,0.3);
+  }
+  
+  .btn:hover {
+    color: #fff;
+    border: 1px solid rgba(223,190,106,0);
+    color: white;
+    background-position: right center;
+  }
+  
+  
+  article {
+    height: 100vh;
+  }
+  
+
+
+
+
+ h1,h4,h5,ul li{
+
+  color:brown;
+  font-size: 20px;
+ font-family: 'Rock Salt', cursive;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 500px) {
+  
+    #h1{
+    margin-top: 10px;
+    }
+#h1{
+
+    margin-top: -10px;
+    font-size: 20px;
+}
+#font011{
+  font-size: 15px;
+}
+#btn{
+  margin-right: 400px !important;
+  width: 50px;
+}
+
+}

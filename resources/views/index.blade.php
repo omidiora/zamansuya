@@ -5,145 +5,281 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zamansuya</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand ml-4" href="#">Zamansuya</a>
-      </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="null" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
-          <div class="navbar-nav ">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link active" href="#">Contact us<span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link active" href="#">About us<span class="sr-only">(current)</span></a>
-           
-          </div>
-        </div>
-      </nav>
+  <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
 
-      <div id="carouselExampleIndicators" class="carousel slide mt-4" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="/images/a.jpg" alt="First slide" style="height:500px">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="/images/d.jpg" alt="Second slide" style="height:500px">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="/images/b.jpg" alt="Third slide" style="height:500px">
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-       
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-         
-          <span class="sr-only">Next</span>
-        </a>
+  <link rel="stylesheet" href="css/home.css">
+  <!-- Libraries CSS Files -->
+  <link href="/lib/owlcarousel/owl.carousel.css" rel="stylesheet">
+  <link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="icon" 
+      type="image/png" href="img/a.jpg">
+
+</head>
+
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg ">
+      <a class="navbar-brand" href="/"><img src="img/a.jpg"  class="img-fluid" alt="" style="width:150px"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link mr-4" href="/" style="font-size:30px;color:brown;">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ml-4" href="{{route('suya')}}"  style="font-size:30px;color:brown;">Buy your Suya <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ml-4" href="/about" style="font-size:30px;color:brown;">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ml-4" href="/contact" style="font-size:30px;color:brown;">Contact us</a>
+          </li>
+          
+        </ul>
       </div>
-      <div class="container mt-4">
-                      <h4 class="h1 heading-title text-center">Zaman Global Ventures </h4>
-                      <p class="heading-text text-center">Buy your Suya, meat.
+    </nav>
+</div>
+
+
+  <div class="cont"  style="width:100%">
+    <img src=/img/c.jpg alt="" class="img-fluid">
+  <div class="centered"><h1 class="display-2" style="color:yellow" ></h1>
+	</div>
+</div>
+  </div>
+ </div>
+
+
+      <div class="container m" style="margin-top:100px" >
+                      <h4 style=""  class="display-2" >Buy your Suya.</h4>
+                      <p class="heading-text text-center">
                       </p>
                   </div>
               </div>
           </div>
       </div>
-     @if ($zaman->count()>0)
-    
-  <div class="container">
-    <div class="card-deck">
-      @foreach ($zaman as $zam)
-          
-     
-        <div class="card">
-        <img src="{{$zam->image}}" class="card-img-top" alt="...">
-          <div class="card-body">
-          <h5 class="card-title">	&#8358;{{$zam->price}}</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted"><div class="btn btn-primary">Add to Cart</div></small>
+    </div>
+
+      <!-------ORDER METHOD----------------->
+<div class="container-fluid  " style="margin-top:40px;">
+  <div class="order">
+      <div class="row d-flex justify-content-center ml-2">
+  <div class="col-md-6 border "   >
+  <h1 id="font" class="tet-center"><h4>Order Online </h4></h1>
+  <img src="img/d.jpg" alt="" class="img-fluid">
+  
+  </div>
+  <div class="col-md-4  border   " style="background:brown">
+    <p class="display-2 text-center d-flex justify-content-center"  style="color:white;margin-top:100px;font-size:40px" id="font011"> ORDER FOR YOUR SUYA</p>
+    <div class="row">
+
+    <a href="{{route('suya')}}"  id="btn" class="btn btn-lg btn-primary " style="margin-left:150px"> Order Now</a>
+  </div>
+    </div>  </div>
+  </div>
+</div>
+<style>
+.border{
+  -webkit-border-radius: 12px;
+-moz-border-radius: 12px;
+border-radius: 12px;
+color:red;F
+outline: 24px solid #3D0A0C;
+outline-offset: 0px;
+
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+  <!-- Start About area -->
+  <div id="about" class="about-area area-padding" style="margin-top:100px">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="section-headline text-center">
+            <h2></h2>
           </div>
         </div>
-        
-      @endforeach
+      </div>
     </div>
-      @else
-         
-      @endif
-    
+  </div>
+  <div class="container mt-4" >
+    <div class="row">
+      <div class="col-md-6">
+        <img src="img/a.jpg" alt="" class="img-fluid">
+      
+      </div>
+      <div class="col-md-6">
+        <p>
+          WE are delighted to introduce you ZAMAN GLOBAL VENTURES trading as <strong>Zaman Suya</strong>
+          spot with outlet in Omole and allen Avenue ,Lagos. We serve the traditional tasty and hot Chicken,Beef , Liver, Lidney ,Goddard suya.
+        ZAMAN Global ventures was incorporated in December 2017 and opened for business operations on the 16th January , 2018.
+        Our mission is to be the suya spot of choice , for lovers of traditional tasty suya by providing quality suya spot of choice , for lovers of 
+        traditional tasty suya,by providing suya options under clean adn hugenic environment. While focusing on satisfying an efficient customer service.
+        </p>
+      </div>
+    </div>
   </div>
 
 
-    
-    <div class="container  mt-4">
-        <div class="row">
-        <div class="col-md-6">
-        <h1>Order Online</h1>
-        <p>Select your favourite suya. provide your address.pay online or cash on Delivery </p>
-        <a href="{{route('suya')}}" class="btn btn-lg btn-primary"> Order Now</a>
-        </div>
-        <div class="col-md-6">
-            <h1>Order By Phone</h1>
-            <p>Phone: 08163501640 , 08108764441 </p>
-            <button class="btn btn-lg btn-primary">Order by Phone </button>
-    
-        
-        </div>
-        </div>
-    </div>
-<div class="background " style="margin-top:100px!important">
-<div class="container">
-    <div class="row">
-    <div class="col-md-6">
-<div>
-    <h3>Contact Us</h3>
 
-<p>Please use this form to submit your feeback. You can also contact us by sending an email to us</p>
-<p>E-mail us : <a href="mailto:info@zamansuya.com">info@zamansuya.com</a></p>
-<p>We look forward to receving your message.</p>
-</div>
-</div>
-<div class="col-md-6">
-    <form>
-        <div class="form-row">
-          <div class="form-group col-md-6">
+  <div id="team" class="our-team-area area-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+
+          <div id="portfolio" class="portfolio-area area-padding fix">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           
-            <input type="text" class="form-control" id="inputEmail4" placeholder="Name">
-          </div>
-          <div class="form-group col-md-6">
+          <!-- single-awesome-project end -->
+          <!-- single-awesome-project start -->
          
-            <input type="Email" class="form-control" id="inputPassword4" placeholder="Email">
+  <!-- End pricing table area -->
+  <!-- Start Testimonials -->
+  <!-- End Suscrive Area -->
+  <!-- Start contact Area -->
+  
+          <!-- Start  contact -->
+        @if ($errors->count()>0)
+        @foreach ($errors as $error)
+        <p class="alert alert-danger">
+          {{$error}}
+
+          
+        </p>
+            
+        @endforeach
+            
+        @endif
+          <div class="col-md-6 offset-md-2 col-sm-6 col-xs-12" style="margin-top:50px" id="contact">
+            @if (count($errors)>0)
+            <ul class="list-group">
+            @foreach ($errors->all() as $error)
+        
+            <li class="list-group-item text-danger">{{$error}}</li>
+                
+            @endforeach
+            </ul>
+                
+            @endif
+            <h1></h1>
+            <div class="form contact-form">
+              <div id="errormessage"></div>
+           
+            </div>
+          </div>
+          <!-- End Left contact -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+  <!-- End Contact Area -->
+
+  <!-- Start Footer bottom Area -->
+  <footer class="container-fluid">
+    <div class="footer-area p-4" style="margin-top:100px;background:black;">
+     
+        <div class="row "style="color:white">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="footer-content">
+              <div class="footer-head">
+                <div class="footer-logo">
+                  <h2><span></span style="color:white"><img src="img/a.jpg" alt="" class="img-fluid"></h2>
+                </div>
+
+                <p style="color:white"> WE are delighted to introduce you ZAMAN GLOBAL VENTURES trading as <strong>Zaman Suya</strong>
+                  spot with outlet in Omole and allen Avenue ,Lagos. We serve the traditional tasty and hot Chicken,Beef , Liver, Lidney ,Goddard suya.
+                ZAMAN Global ventures was incorporated in December 2017 and opened for business operations on the 16th January , 2018.</p>
+                <div class="footer-icons">
+                  <ul class="d-flex d-inline' style="color:white">
+                    
+                  
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end single footer -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="footer-content">
+              <div class="footer-head">
+                <h4 style="color:white">information</h4>
+                <p style="color:white">
+                 Order for your suya online.Get delivered to you.
+                </p>
+                <div class="footer-contacts" style="color:white">
+                  <p style="color:white"><span style="color:white">Tel:</span> 08163501640 , 08108764441</p>
+                  <p style="color:white"><span style="color:white">Email:</span>info@zamansuya.com</p>
+
+                  
+                  <div class="d-inline ml-4"><a href="http://www.instagram.com/zamansuya" style="color:white"> <i class="fa fa-instagram" style="font-size:25px"></i></a></div>
+                  <div class="d-inline ml-4"><a href="http://www.twitter.com/zamansuya" style="color:white"> <i class="fa fa-twitter" style="font-size:25px"></i></a></div>
+                  <div class="d-inline ml-4"><a href="http://m.facebook.com/zamansuya" style="color:white"> <i class="fa fa-facebook" style="font-size:25px"></i></a></div>
+
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end single footer -->
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="footer-content">
+              <div class="footer-head">
+                <h4><b> <strong style="color:white"> Service</strong></b></h4>
+                <div class="flicker-img">
+                  <p style="color:white">Order Online . We deliver it to you</p>
+                 
+                 
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="form-group">
-          
-          <input type="text" class="form-control" id="inputAddress" placeholder="Phone">
-        </div>
-        <div class="form-group">
-        <textarea name="" id="" cols="70" rows="10" placeholder="Your Message*"></textarea>
-        </div>
-        
-        <button type="submit" class="btn btn-primary">Send Message</button>
-      </form>
-</div>
-</div>
-</div>
-</div>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-   </body>
+      </div>
+    </div>
+    <div class="footer-area-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="copyright text-center">
+              <p>
+                &copy; Copyright <strong>ZAMAN Global VENTURE</strong>. All Rights Reserved
+              </p>
+            </div>
+            
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+
+</body>
+
 </html>
-
-
-

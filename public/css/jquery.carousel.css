@@ -1,0 +1,39 @@
+@import url(http://cdn.cloudcache.dk/materialize/0.96.1/css/materialize-fonts.css);
+.carousel-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.carousel-wrapper>.carousel-list-container {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow: hidden;
+}
+.carousel-wrapper>.carousel-list-container>.carousel-image-container {
+	list-style-type: none;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.carousel-wrapper>.carousel-list-container>.carousel-image-container>.carousel-image {
+	position: relative;
+	z-index: 40;
+	left: 0;
+	top: 0;
+	height: 100%;
+	background-size: cover;
+}
+.carousel-wrapper>.carousel-list-container>.carousel-image-container>.carousel-overlay {
+	position: absolute;
+	z-index: 50;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+}
+.mdi-hardware-keyboard-arrow-left, .mdi-hardware-keyboard-arrow-right {
+	font-size: 4em;
+	color: #FFF;
+}

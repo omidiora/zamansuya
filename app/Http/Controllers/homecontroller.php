@@ -13,6 +13,8 @@ class homecontroller extends Controller
         $zaman=Admin::all();
         return view('index')->with('zaman',$zaman);
     }
+
+    
     public function index()
     {
         $zaman=Admin::all();
@@ -23,4 +25,9 @@ class homecontroller extends Controller
     return view('about');
     }
 
+
+    public function show($slug){
+     $productdetail=Admin::where('slug', $slug)->first();;
+    return view('productDetail')->with('productdetail', $productdetail);  
+    }
 }

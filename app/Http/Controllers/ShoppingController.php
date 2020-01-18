@@ -15,7 +15,7 @@ class ShoppingController extends Controller
 
         $pdf=Admin::find(request()->pdf_id);
         
-        $cart=\Cart::add([
+        $cart=Cart::add([
             'id'=>$pdf->id,
         ]);
         dd(request()->all());
