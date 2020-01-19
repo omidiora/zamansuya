@@ -67,30 +67,21 @@
 <div class="container-fluid  " style="margin-top:40px;">
   <div class="order">
       <div class="row d-flex justify-content-center ml-2">
-  <div class="col-md-6 border "   >
-  <h1 id="font" class="tet-center"><h4>Order Online </h4></h1>
-  <img src="img/d.jpg" alt="" class="img-fluid">
+  <div class="col-md-6 col-sm-12 border ">
+  <h1 id="font" class="text-center"><h4>Order Online </h4></h1>
+  <img src="img/d.jpg" alt="" class="img-fluid"> 
   
   </div>
-  <div class="col-md-4  border   " style="background:brown">
+  <div class="col-md-6 col-sm-12   border" style="background:brown">
     <p class="display-2 text-center d-flex justify-content-center"  style="color:white;margin-top:100px;font-size:40px" id="font011"> ORDER FOR YOUR SUYA</p>
-    <div class="row">
+    <div class="row d-flex justify-content-center">
 
-    <a href="{{route('suya')}}"  id="btn" class="btn btn-lg btn-primary " style="margin-left:150px"> Order Now</a>
+    <a href="{{route('suya')}}"   class="btn btn-lg btn-primary btn-lg  text-center" style="margin-left:20px">Order Now</a>
   </div>
     </div>  </div>
   </div>
 </div>
 <style>
-.border{
-  -webkit-border-radius: 12px;
--moz-border-radius: 12px;
-border-radius: 12px;
-color:red;F
-outline: 24px solid #3D0A0C;
-outline-offset: 0px;
-
-}
 
 </style>
 
@@ -123,7 +114,7 @@ outline-offset: 0px;
       </div>
       <div class="col-md-6">
         <p>
-          WE are delighted to introduce you ZAMAN GLOBAL VENTURES trading as <strong>Zaman Suya</strong>
+          We are delighted to introduce you ZAMAN GLOBAL VENTURES trading as <strong>Zaman Suya</strong>
           spot with outlet in Omole and allen Avenue ,Lagos. We serve the traditional tasty and hot Chicken,Beef , Liver, Lidney ,Goddard suya.
         ZAMAN Global ventures was incorporated in December 2017 and opened for business operations on the 16th January , 2018.
         Our mission is to be the suya spot of choice , for lovers of traditional tasty suya by providing quality suya spot of choice , for lovers of 
@@ -209,7 +200,7 @@ outline-offset: 0px;
                   <h2><span></span style="color:white"><img src="img/a.jpg" alt="" class="img-fluid"></h2>
                 </div>
 
-                <p style="color:white"> WE are delighted to introduce you ZAMAN GLOBAL VENTURES trading as <strong>Zaman Suya</strong>
+                <p style="color:white"> We are delighted to introduce you ZAMAN GLOBAL VENTURES trading as <strong>Zaman Suya</strong>
                   spot with outlet in Omole and allen Avenue ,Lagos. We serve the traditional tasty and hot Chicken,Beef , Liver, Lidney ,Goddard suya.
                 ZAMAN Global ventures was incorporated in December 2017 and opened for business operations on the 16th January , 2018.</p>
                 <div class="footer-icons">
@@ -225,8 +216,8 @@ outline-offset: 0px;
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="footer-content">
               <div class="footer-head">
-                <h4 style="color:white">information</h4>
-                <p style="color:white">
+                <h4 style="color:brown">information</h4>
+                <p style="color:brown">
                  Order for your suya online.Get delivered to you.
                 </p>
                 <div class="footer-contacts" style="color:white">

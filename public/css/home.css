@@ -72,6 +72,15 @@
     color: white;
     background-position: right center;
   }
+  .border{
+    -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  color:red;
+  outline: 24px solid #3D0A0C;
+  outline-offset: 0px;
+  }
+  
   
   
   article {
