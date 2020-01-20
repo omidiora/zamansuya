@@ -64,9 +64,9 @@
     <p class="card-text">&#8358;{{$zam->price}}</p>
     </div>
     <div class="card-footer">
-    <small class="text-muted"><a href="{{route('product.show',$zam->slug)}}" class=" btn btn-danger">Add to Cart</a></small>
-    </div>
-  </div>
+    <small class="text-muted"><a href="{{route('product.show',$zam->slug)}}" class=" btn btn-danger">View suya</a></small>
+    </div>j
+  </
   </div>
 <br>
   @endforeach

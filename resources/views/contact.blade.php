@@ -104,6 +104,11 @@
 </div>
 </div>
 <!-- End Contact --->
+
+<div class="container" style="margin-top:100px">
+  <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1RLyTLFqo4ZCcffGSqMnzWZE2uato0qLQ" width="1040" height="480"></iframe>
+</div>
+
 @extends('layouts.footer')
 </body>
 </html>

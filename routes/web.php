@@ -39,7 +39,7 @@ Route::post('/cart/save-later','CartController@saveForLater')->name('save.later'
 
 Route::get('/cart/empty',function($id){
     Cart::remove($id);
-    return bacl()->with('success','Item has been removed');
+    return back()->with('success','Item has been removed');
 });
 Route::get('/checkout','CheckOutController@index')->name('checkout.index');
 
@@ -54,4 +54,9 @@ Route::get('/checkout','CheckOutController@index')->name('checkout.index');
             'uses'=>'CartController@incr',
             'as'=>'cart.incr',
             ]);
+
+//payment
+
+Route::get('/payment','PaymentController@index');
+Route::get('payment-successful','PaymentController@success');
         
