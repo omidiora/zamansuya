@@ -121,6 +121,8 @@ footer a {
      </div>
 </section>
 
+<h1>Payment Method</h1>
+
 @if(session()->has('success'))
 <div class="alert alert-success">
 {{session()->get('success')}}

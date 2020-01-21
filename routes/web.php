@@ -42,6 +42,8 @@ Route::get('/cart/empty',function($id){
     return back()->with('success','Item has been removed');
 });
 Route::get('/checkout','CheckOutController@index')->name('checkout.index');
+Route::Post('payment-form','CheckOutController@form')->name('payment');
+
 
     Route::get('cart/decr/{id}',[
         'uses'=>'CartController@decr',
@@ -59,4 +61,5 @@ Route::get('/checkout','CheckOutController@index')->name('checkout.index');
 
 Route::get('/payment','PaymentController@index');
 Route::get('payment-successful','PaymentController@success');
+
         

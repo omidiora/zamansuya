@@ -57,9 +57,9 @@
         function payWithRave() {
             var x = getpaidSetup({
                 PBFPubKey: "FLWPUBK_TEST-8ef433f40ea5fe65025839a85f1de47e-X",
-                customer_email: "user@example.com",
-                amount: 2000,
-                customer_phone: "08067031918",
+                customer_email:,a
+                amount: {{Cart::total()}},
+                customer_phone: {{$payment->phone},
                 currency: "NGN",
                 txref: "rave-123456",
                 meta: [{
@@ -77,11 +77,17 @@
                        window.location="payment/index";
                     } else {
                         // redirect to a failure page.
-                        window.location="index";
+                        window.location="payment/failure";
                     }
     
                     x.close(); // use this to close the modal immediately after payment.
                 }
             });
+
+            payWithRave();
+          
         }
+
+
+        
     </script>

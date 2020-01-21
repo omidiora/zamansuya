@@ -25,7 +25,7 @@ class ContactController extends Controller
             'msg'=>$request->message
           ], function($mail)use($request){
             $mail->from($request->email,$request->name);
-            $mail->to('omidioraemmanuel@gmail.com')->subject('Contact Message');
+            $mail->to('Zamansuya@gmail.com')->subject($request->subject);
             
           });
           Session::flash('message','Thanks for contacting us');
