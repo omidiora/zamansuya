@@ -8,7 +8,6 @@ use App\paymentform;
 
 class CheckOutController extends Controller
 {
-    //
     public function index()
     {
         return view('checkout.index');
@@ -16,24 +15,25 @@ class CheckOutController extends Controller
 
     public function form(Request $request)
     {
-       
-            
-            $paymentform=new paymentform;
-           $paymentform->name=$request->name;
-           $paymentform->email=$request->email;
-            $paymentform->phone=$request->phone;
-            $paymentform->save();
-            Mail::send('payment.success',[
-                'name'=>$request->name,
-                'phone'=> $request->phone,
-              ], function($mail)use($request){
-                $mail->from($request->email,$request->name);
-                $mail->to('omidioraemmanuel@gmail.com')->subject('Order from Zamansuya by ' . $request->name,$request->phone);
-              
-              });
-         
+       $this->validate($request,[
+         'name'=>'required',
+         'email'=>'required|email',
+         'phone'=>'required',
 
-            return redirect('payment-successful');
+       ]);
+            
+           
+       Mail::send('payment.success',[
+        'msg'=>$request->name,
+        'phone'=>$request->phone,
+      ], function($mail)use($request){
+        $mail->from($request->email,$request->name);
+        $mail->to('Zamansuya@gmail.com')->subject($request->subject);
+        
+      });
+      return redirect()->back();
+
+         
            
 
 

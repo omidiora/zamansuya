@@ -1,7 +1,22 @@
-@extends('layouts.header')
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/home.css">
   <!-- Libraries CSS Files -->
   <link href="/lib/owlcarousel/owl.carousel.css" rel="stylesheet">
   <link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="icon" 
+      type="image/png" href="img/a.jpg">
+
 </head>
 
 <body data-spy="scroll" data-target="#navbar-example">
@@ -12,7 +27,7 @@
     <!-- header-area start -->
     
             <!-- Navigation -->
-            <div class="container">
+            <div class="container ">
             <nav class="navbar navbar-expand-lg ">
               <a class="navbar-brand" href="/"><img src="img/a.jpg"  class="img-fluid" alt="" style="width:150px"></a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,8 +80,8 @@
     </div>
     <div class="card-footer">
     <small class="text-muted"><a href="{{route('product.show',$zam->slug)}}" class=" btn btn-danger">View suya</a></small>
-    </div>j
-  </
+    </div>
+  </div>
   </div>
 <br>
   @endforeach

@@ -43,17 +43,6 @@
 </div>
 
 
-@if ($errors->count()>0)
-@foreach ($errors as $error)
-<p class="alert alert-danger">
-  {{$error}}
-
-  
-</p>
-    
-@endforeach
-    
-@endif
   <div class="col-md-6 offset-md-2 col-sm-6 col-xs-12" style="margin-top:50px" id="contact">
     @if (count($errors)>0)
     <ul class="list-group">

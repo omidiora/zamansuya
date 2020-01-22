@@ -121,7 +121,7 @@ footer a {
      </div>
 </section>
 
-<h1>Payment Method</h1>
+<h1 class="text-center">Payment Method</h1>
 
 @if(session()->has('success'))
 <div class="alert alert-success">
@@ -162,7 +162,7 @@ footer a {
                             <form action="{{route('cart.delete',$item->rowId)}}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                            <td class="text-right"><button type="submit"><i class="fa fa-trash" ></i> </a></button> </td>
+                            <td class="text-right"><button type="submit"><i class="fa fa-trash" style="color:red" ></i> </a></button> </td>
                         </form>
                         
                         </tr>

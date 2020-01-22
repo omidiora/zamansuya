@@ -45,6 +45,7 @@
 
 
     <!--flutter payment-->
+    <h1 class="text-center">Pay online for your Suya</h1>
 
     <form>
         <script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>

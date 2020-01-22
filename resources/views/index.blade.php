@@ -45,17 +45,23 @@
     </nav>
 </div>
 
+<style>
 
+.carousel-inner > .carousel-item {
+   height: 80vh !important;
+   background-size: cover;
+}
+</style>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="/img/e.jpg" alt="First slide">
+      <img class=" w-100 img-fluid "  src="/img/e.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="/img/f.jpg" alt="Second slide">
+      <img class=" w-100  img-fluid " src="/img/f.jpg" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="/img/d.jpg" alt="Third slide">
+      <img class=" w-100 img-fluid " src="/img/d.jpg" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -73,8 +79,8 @@
  </div> --}}
 
 
-      <div class="container m" style="margin-top:100px" >
-                      <h4 style=""  class="display-2"  >Buy your Suya.</h4>
+      <div class="container " style="margin-top:100px"  id="buy">
+                      <h4 style="font-size:40px;text-align:center"  >Buy your Suya.</h4>
                       <p class="heading-text text-center">
                       </p>
                   </div>
@@ -217,14 +223,13 @@
             <div class="footer-content">
               <div class="footer-head">
                 <div class="footer-logo">
-                  <h2><span></span style="color:white"><img src="img/a.jpg" alt="" class="img-fluid"></h2>
+                  <h2><span></span style="color:white"><img src="img/f.jpg" alt="" class="img-fluid"></h2>
                 </div>
 
                 <p style="color:white"> We are delighted to introduce you ZAMAN GLOBAL VENTURES trading as <strong>Zaman Suya</strong>
-                  spot with outlet in Omole and allen Avenue ,Lagos. We serve the traditional tasty and hot Chicken,Beef , Liver, Lidney ,Goddard suya.
-                ZAMAN Global ventures was incorporated in December 2017 and opened for business operations on the 16th January , 2018.</p>
+                  spot with outlet in Omole and allen Avenue ,Lagos.</p>
                 <div class="footer-icons">
-                  <ul class="d-flex d-inline' style="color:white">
+                  <ul class="d-flex d-inline" style="color:white">
                     
                   
                   </ul>

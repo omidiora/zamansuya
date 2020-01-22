@@ -52,3 +52,7 @@
 
 
     </div>
+
+    <p>{{ $msg }} just Order from Zamansuya a <b> {{$item->model->name}} </b></p>
+   <p> Customer Telephone:   {{ $phone}}</p>
+ 

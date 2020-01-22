@@ -71,132 +71,82 @@
     </div>
     <!-- header-area end -->
   </header>
-  <style>
-  .con{
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-/* Bottom left text */
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-}
-
-/* Top left text */
-.top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-
-/* Top right text */
-.top-right {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-}
-
-/* Bottom right text */
-.bottom-right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-}
-
-/* Centered text */
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-@import url('https://fonts.googleapis.com/css?family=PT+Sans');
-
-.btn:hover {
-  color: #fff;
-  border: 1px solid rgba(223,190,106,0);
-  color: white;
-  background-position: right center;
-}
-
-
-article {
-  height: 100vh;
-}
-
-  </style>
-  <!-- header end -->
 
  
  <div class="container" style="margin-top:100px">
    <p style="font-size:30px;text-align:center">Place Your Order</p>
+   @if (count($errors)>0)
+   <ul class="list-group">
+   @foreach ($errors->all() as $error)
 
+   <li class="list-group-item text-danger">{{$error}}</li>
+       
+   @endforeach
+   </ul>
+   @endif
 
-   @if ($errors->count()>0)
-@foreach ($errors as $error)
-<p class="alert alert-danger">
-  {{$error}}
-
-  
-</p>
-    
-@endforeach
-@endif
  <form method="POST" action="{{route('payment')}}">
   @csrf
 
     <div class="form-group">
       <label for="exampleInputEmail1">Name</label>
-      <input type="text" class="form-control form-control-lg" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name">
+      <input type="text" class="form-control form-control-lg"  name="name"  aria-describedby="emailHelp" placeholder="Enter Name">
     </div>
 
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control form-control-lg" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <input type="email" class="form-control form-control-lg"  name="email"   aria-describedby="emailHelp" placeholder="Enter email">
     </div>
 
       <div class="form-group">
       <label for="exampleInputEmail1">Address</label>
-      <input type="text" class="form-control form-control-lg" name="address" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correct Addresss">
+      <input type="text" class="form-control form-control-lg" name="address"  aria-describedby="emailHelp" placeholder="Correct Addresss">
     </div>
 
     <div class="form-group">
       <label for="exampleInputEmail1">Phone </label>
-      <input type="text" name="phone" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Phone">
+      <input type="text" name="phone" class="form-control form-control-lg"  aria-describedby="emailHelp" placeholder="Enter Phone">
     </div>
     <div class="col-sm-12 col-md-6 text-right">
     </div>
 
-    <div class="checkbox">
-      <label><input type="checkbox" value="1">Cash On Delivery</label>
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" value="2">Pos on Delivery</label>
+    <div class="form-group">
+      <label for="">Chose Your Payment method :</label>
+      <div class="radio">
+        <label><input type="radio" name="optradio" checked>Cash on Delivery</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="optradio">Cash on Pickup</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="optradio" >Pos on Pickup</label>
+
+       
+      </div>
+    <a href="/payment" >Pay online </a> 
     </div>
 
  </div>
  
  @if (Cart::count()>0)
  <table class="table table-striped">
-  @foreach (Cart::content() as $item)
   <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">Product</th>
       <th scope="col">Price</th>
+
     </tr>
   </thead>
+  @foreach (Cart::content() as $item)
+
   <tbody>
     <tr>
       <th scope="row"></th>
-      <td>{{$item->model->name}}</td>
-      <td>{{$item->model->price}}</td>
-      <td>  <button type="submit" class="btn btn-danger">PLACE YOUR ORDER </a></button>
-      </td>
+      <td><b>{{$item->model->name}}</b></td>
+      <td><b>{{$item->model->price}} </b></td>
+      <td><b>{{$item->model->price}}</b></td>
+     
       {{-- <form action="{{route('cart.delete',$item->rowId)}}" method="POST">
         @csrf
         @method('DELETE')
@@ -206,8 +156,12 @@ article {
 
     </tr>
   </tbody>
-</form>
  @endforeach
+ <td></td>
+ <td>  <button type="submit" class="btn btn-danger ">PLACE YOUR ORDER </a></button>
+ </form>
+
+ </td>
 </table>
     
 @endif

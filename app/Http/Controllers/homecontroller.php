@@ -3,31 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Admin;
 
-class homecontroller extends Controller
+class HomeController extends Controller
 {
-    //
-
-    public function home(){
-        $zaman=Admin::all();
-        return view('index')->with('zaman',$zaman);
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
     }
 
-    
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
     public function index()
     {
-        $zaman=Admin::all();
-        return view('product')->with('zaman',$zaman);
-    }
-
-    public function about(){
-    return view('about');
-    }
-
-
-    public function show($slug){
-     $productdetail=Admin::where('slug', $slug)->first();;
-    return view('productDetail')->with('productdetail', $productdetail);  
+        return view('home');
     }
 }

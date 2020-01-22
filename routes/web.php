@@ -10,13 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/','homecontroller@home');
+Route::get('/','IndexController@home');
 
-Route::get('/buy-now/{slug}','homecontroller@show')->name('product.show');
+Route::get('/buy-now/{slug}','IndexController@show')->name('product.show');
 
-Route::get('/about','homecontroller@about');
+Route::get('/about','IndexController@about');
 
-Route::get('suya','homecontroller@index')->name('suya');
+Route::get('suya','IndexController@index')->name('suya');
 
 
 //admin route
@@ -63,3 +63,10 @@ Route::get('/payment','PaymentController@index');
 Route::get('payment-successful','PaymentController@success');
 
         
+Auth::routes();
+
+Route::get('/home', 'IndexController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

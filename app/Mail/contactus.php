@@ -6,12 +6,16 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use App\Mail\contactus;
+ use App\Mail\contactus;
+use App\Mail\paymentform;
 
 class contactus extends Mailable
 {
-    use Queueable, SerializesModels;
     public $name;
+
+    use Queueable, SerializesModels;
+
+   
     /**
      * Create a new message instance.
      *
