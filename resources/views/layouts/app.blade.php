@@ -1,30 +1,31 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+  <link rel="stylesheet" href="/css/home.css">
+  <!-- Libraries CSS Files -->
+  <link href="/lib/owlcarousel/owl.carousel.css" rel="stylesheet">
+  <link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="icon" 
+      type="image/png" href="img/a.jpg">
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+</head>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+              <img src="img/a.jpg" alt="" class="img-fluid" width="100px">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -73,8 +74,12 @@
         </nav>
 
         <main class="py-4">
+            <h1 class="text-center">Create an account in Zamansuya</h1>
+
             @yield('content')
+
         </main>
+        @extends('layouts.footer')
     </div>
 </body>
 </html>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 
 use App\Admin;
+use Illuminate\Support\Facades\View;
+use App\User;
 
 class IndexController extends Controller
 {
@@ -22,7 +24,10 @@ class IndexController extends Controller
     public function show($slug)
     {
       $productdetail=Admin::where('slug',$slug)->first();
+     
         return view('productDetail')->with('productdetail',$productdetail);
     }
+
+   
 
 }

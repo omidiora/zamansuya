@@ -21,6 +21,7 @@ class ContactController extends Controller
          'email' => 'required|email',
          'message' => 'required'
          ]);
+        
          Mail::send('emails.contact-message',[
             'msg'=>$request->message
           ], function($mail)use($request){

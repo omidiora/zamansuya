@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\paymentform;
  use Mail;
+ use Session;
 
 class CheckOutController extends Controller
 {
@@ -21,14 +22,13 @@ class CheckOutController extends Controller
          'phone'=>'required',
 
        ]);
-            
-           
-       Mail::send('payment.success',[
+    
+        Mail::send('payment.success',[
         'msg'=>$request->name,
         'phone'=>$request->phone,
       ], function($mail)use($request){
         $mail->from($request->email,$request->name);
-        $mail->to('Zamansuya@gmail.com')->subject($request->subject);
+        $mail->to('Zamansuya@gmail.com')->subject('Zamansuya Order by'.$request->name);
         
       });
       return redirect()->back();

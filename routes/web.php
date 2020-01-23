@@ -61,6 +61,9 @@ Route::Post('payment-form','CheckOutController@form')->name('payment');
 
 Route::get('/payment','PaymentController@index');
 Route::get('payment-successful','PaymentController@success');
+Route::get('successful-payment','PaymentController@paysuccessfully');
+
+Route::get('payment-successfully','PaymentController@paysuccessfully');
 
         
 Auth::routes();
@@ -70,3 +73,4 @@ Route::get('/home', 'IndexController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+

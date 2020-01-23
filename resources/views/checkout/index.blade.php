@@ -123,7 +123,7 @@
 
        
       </div>
-    <a href="/payment" >Pay online </a> 
+    <a href="/register" >Pay online </a> 
     </div>
 
  </div>

@@ -32,7 +32,14 @@
             <a class="nav-link ml-4" href="{{route('suya')}}"  style="font-size:30px;color:brown;">Buy your Suya <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link ml-4" href="/about" style="font-size:30px;color:brown;">About us</a>
+            <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
           </li>
           <li class="nav-item">
             <a class="nav-link ml-4" href="/contact" style="font-size:30px;color:brown;">Contact us</a>
@@ -50,45 +57,38 @@
     <form>
         <script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
         <button type="button" onClick="payWithRave()">Pay Now</button>
-    </form>
-    
-    <script>
-        const API_publicKey = "FLWPUBK_TEST-8ef433f40ea5fe65025839a85f1de47e-X";
-    
-        function payWithRave() {
-            var x = getpaidSetup({
-                PBFPubKey: "FLWPUBK_TEST-8ef433f40ea5fe65025839a85f1de47e-X",
-                customer_email:,a
-                amount: {{Cart::total()}},
-                customer_phone: {{$payment->phone},
-                currency: "NGN",
-                txref: "rave-123456",
-                meta: [{
-                    metaname: "flightID",
-                    metavalue: "AP1234"
-                }],
-                onclose: function() {},
-                callback: function(response) {
-                    var txref = response.tx.txRef; // collect txRef returned and pass to a 					server page to complete status check.
-                    console.log("This is the response returned after a charge", response);
-                    if (
-                        response.tx.chargeResponseCode == "00" ||
-                        response.tx.chargeResponseCode == "0"
-                    ) {
-                       window.location="payment/index";
-                    } else {
-                        // redirect to a failure page.
-                        window.location="payment/failure";
-                    }
-    
-                    x.close(); // use this to close the modal immediately after payment.
-                }
-            });
-
-            payWithRave();
-          
-        }
-
-
-        
-    </script>
+    </form>    
+  <script>
+      const API_publicKey = "FLWPUBK_TEST-8ef433f40ea5fe65025839a85f1de47e-X";
+  
+      function payWithRave() {
+          var x = getpaidSetu p({
+              PBFPubKey: "FLWPUBK_TEST-8ef433f40ea5fe65025839a85f1de47e-X",
+              customer_email: "{{Auth::user()->email}}",
+              amount:" {{Cart::total()}} " ,
+              customer_phone: "{{Auth::user()->phone}}",
+              currency: "NGN",
+              txref: "rave-123456",
+              meta: [{
+                  metaname: "flightID",
+                  metavalue: "AP1234"
+              }],
+              onclose: function() {},
+              callback: function(response) {
+                  var txref = response.tx.txRef; // collect txRef returned and pass to a 					server page to complete status check.
+                  console.log("This is the response returned after a charge", response);
+                  if (
+                      response.tx.chargeResponseCode == "00" ||
+                      response.tx.chargeResponseCode == "0"
+                  ) {
+                      // redirect to a success page
+                    window.location='/payment-successfully';
+                  } else {
+                      // redirect to a failure page.
+                  }
+  
+                  x.close(); // use this to close the modal immediately after payment.
+              }
+          });
+      }
+  </script>

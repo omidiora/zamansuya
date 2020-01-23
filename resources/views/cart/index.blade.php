@@ -174,7 +174,7 @@ footer a {
                             <td></td>
                             <td></td>
                             <td >Tax</td>
-                        <td>&#8358;{{Cart::setGlobalTax(1)}}</td>
+                        <td>&#8358;0</td>
                         
                         </tr>
                            <tr>
